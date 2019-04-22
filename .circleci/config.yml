@@ -20,7 +20,10 @@ aliases:
       only: master
   - &filter-only-semantic-pr
     branches:
-      only:  /^(dependabot|fix|feat)\/.*$/
+      only:  /^(pull|dependabot|fix|feat)\/.*$/
+  - &filter-only-fork-pr
+    branches:
+      only:  /^pull\/.*$/
 
 defaults: &defaults
   working_directory: ~/playground
